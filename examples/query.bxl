@@ -1,0 +1,11 @@
+
+{
+    "overall": {{:getAccountInfo(User="some user) as account:{user string, name string}},
+    "name": {{:account.name}:string}}
+}
+
+//// 
+some bindings
+
+getAccountInfo /accounts/$USER
+getName getName.sh

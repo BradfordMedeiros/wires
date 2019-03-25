@@ -1,0 +1,10 @@
+
+module NetworkSender uses Network {
+   input string message
+   output ok bool 
+   wiring {
+     Network.send(message) 
+   }
+}
+
+

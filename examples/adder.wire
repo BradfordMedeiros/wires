@@ -1,0 +1,40 @@
+
+module Adder with externalWiring {
+   input number num1
+   input number num2
+   output number sum
+   wiring | bash {
+       NUMBER=((num1 + num2))
+       sendmail -u bradmedeiros0@gmailcom -m hello how are you
+   }
+}
+
+
+EventSource Cron {
+
+   before | bash {
+        make cron happy and call this stuff and set $id in it
+   }   
+   
+   output event 
+}
+
+
+onMondays |= Cron
+onMondays.event => printer.value 
+
+
+adder := Adder
+print := Printer
+12 -> adder.num1
+34 -> adder.num2
+adder.sum -> print.value
+
+
+metadata:
+adder->print:pipe1
+print->adder:pipe2
+
+pipe1: stdout
+pipe2: mqtt
+pipe1, pipe2: redundancy, or first 
