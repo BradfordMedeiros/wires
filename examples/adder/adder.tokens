@@ -1,0 +1,29 @@
+module Adder {
+   num1 input int
+   num2 input int 
+   num3 output int 
+   wiring {
+        num3 = num1 + num2
+   }
+}
+
+adder := Adder
+print := Printer
+12 -> adder.num1
+34 -> adder.num2
+adder.sum -> print.value
+
+
+module-keyword name scope-opening
+name input int 
+name input int
+name output int
+wiring identifier 
+
+name set-equals name
+name set-equals name
+number goes-to name . name 
+number goes-to name . name 
+name . name goes-to name.name 
+
+

@@ -1,0 +1,17 @@
+
+module Adder {
+   num1 input int
+   num2 input int 
+   num3 output int 
+   wiring {
+        num3 = num1 + num2
+   }
+}
+
+adder := Adder
+print := Printer
+12 -> adder.num1
+34 -> adder.num2
+adder.sum -> print.value
+
+

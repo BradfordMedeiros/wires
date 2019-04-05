@@ -1,0 +1,18 @@
+
+module NetworkSender uses Network {
+   input message string
+   output ok bool 
+   wiring BASH{{
+     Network.send(message) 
+   }}
+}
+
+
+module-keyword name uses name scope-opening
+input name string
+output name bool
+wiring identifier (which is name{{ anything in here }})
+
+
+
+
