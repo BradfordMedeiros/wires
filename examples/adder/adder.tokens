@@ -25,5 +25,3 @@ name set-equals name
 number goes-to name . name 
 number goes-to name . name 
 name . name goes-to name.name 
-
-
