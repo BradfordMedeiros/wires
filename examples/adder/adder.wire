@@ -1,17 +1,16 @@
 
+
 module Adder {
-   num1 input int
-   num2 input int 
-   num3 output int 
-   wiring {
-        num3 = num1 + num2
-   }
+   numone input int
+   numtwo input int 
+   numthree output int 
+   wiring {{
+        numthree = numone + numtwo
+   }}
 }
 
 adder := Adder
 print := Printer
-12 -> adder.num1
-34 -> adder.num2
+12 -> adder.numone
+34 -> adder.numtwo
 adder.sum -> print.value
-
-

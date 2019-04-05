@@ -2,9 +2,9 @@ module Adder {
    num1 input int
    num2 input int 
    num3 output int 
-   wiring {
+   wiring {{
         num3 = num1 + num2
-   }
+   }}
 }
 
 adder := Adder
